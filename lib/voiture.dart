@@ -4,31 +4,25 @@ class Voiture {
   String immatriculation;
   String modele;
   double prixHT;
-  int    nbPortes;
+  int nbPortes;
   Moteur moteur;
 
-  Voiture({
-    required this.immatriculation,
-    required this.modele,
-    required this.prixHT,
-    required this.moteur,
-    this.nbPortes = 4
-  });
+  Voiture({required this.immatriculation, required this.modele, required this.prixHT, required this.moteur, this.nbPortes = 4});
 
   @override
   String toString() => {
-      "immatriculation": this.immatriculation,
-      "modele": this.modele,
-      "prixHT": this.prixHT,
-      "nbPortes": this.nbPortes,
-      "moteur": this.moteur.toString(),
-    }.toString();
+        "immatriculation": immatriculation,
+        "modele": modele,
+        "prixHT": prixHT,
+        "nbPortes": nbPortes,
+        "moteur": moteur.toString(),
+      }.toString();
 
   Map<String, dynamic> toJson() => {
-    "immatriculation": this.immatriculation,
-    "modele": this.modele,
-    "prixHT": this.prixHT,
-    "nbPortes": this.nbPortes,
-    "moteur": this.moteur.toJson(),
-  };
+        "immatriculation": immatriculation,
+        "modele": modele,
+        "prixHT": prixHT,
+        "nbPortes": nbPortes,
+        "moteur": moteur.toJson(),
+      };
 }

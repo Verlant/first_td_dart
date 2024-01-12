@@ -1,5 +1,1 @@
-enum Energie {
-  Gazole,
-  Essence,
-  Electrique
-}
+enum Energie { gazole, essence, electrique }

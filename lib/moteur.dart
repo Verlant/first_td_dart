@@ -8,19 +8,19 @@ class Moteur {
   Moteur({
     required this.cylindree,
     required this.puissance,
-    this.energie = Energie.Essence,
+    this.energie = Energie.essence,
   });
 
   @override
   String toString() => {
-      "cylindree": this.cylindree,
-      "puissance": this.puissance,
-      "energie": this.energie,
-    }.toString();
+        "cylindree": cylindree,
+        "puissance": puissance,
+        "energie": energie,
+      }.toString();
 
   Map<String, dynamic> toJson() => {
-    "cylindree": this.cylindree,
-    "puissance": this.puissance,
-    "energie": this.energie,
-  };
+        "cylindree": cylindree,
+        "puissance": puissance,
+        "energie": energie,
+      };
 }

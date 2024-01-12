@@ -3,9 +3,9 @@ import 'package:firstd/voiture.dart';
 import 'package:firstd/energie.dart';
 
 void main(List<String> arguments) {
-  var moteurGazole = Moteur(cylindree: 10, puissance: 10, energie: Energie.Gazole);
+  var moteurGazole = Moteur(cylindree: 10, puissance: 10, energie: Energie.gazole);
   var moteurEssence = Moteur(cylindree: 10, puissance: 10);
-  var moteurElectrique = Moteur(cylindree: 10, puissance: 10, energie: Energie.Electrique);
+  var moteurElectrique = Moteur(cylindree: 10, puissance: 10, energie: Energie.electrique);
 
   List<Voiture> voitures = [
     Voiture(immatriculation: 'AA-111-AA', modele: '208', prixHT: 20000, moteur: moteurGazole),
@@ -17,14 +17,13 @@ void main(List<String> arguments) {
     Voiture(immatriculation: 'GG-777-GG', modele: 'Mustang', prixHT: 48000, moteur: moteurGazole),
   ];
 
-
   var totalHT = 0.00;
-  for(Voiture voiture in voitures) {
+  for (Voiture voiture in voitures) {
     print(voiture.toJson());
     totalHT += voiture.prixHT;
   }
   print("Le total HT de toutes les voitures est de $totalHT");
-  voitures.forEach((voiture) {
-    if (voiture.moteur.energie == Energie.Electrique) print(voiture.toJson());
-  });
+  for (var voiture in voitures) {
+    if (voiture.moteur.energie == Energie.electrique) print(voiture.toJson());
+  }
 }
